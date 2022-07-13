@@ -31,6 +31,12 @@ El proyecto se desarrolló en lenguaje de java (> https://www.java.com/es/downlo
 *Bases de datos*
 Para la persistencia de datos se utilizó MySQL Workbench versión 8.0
 
+*Peticiones web*
+
+Para el correcto funcionamiento se utilizó la herramienta POSTMAN (> https://openwebinars.net/blog/que-es-postman/ ) para las peticiones get y post del proyecto. Version: 9.24
+
+
+************************************************************
 # Instalación
 
 1. Descargar las herramientas mencionadas en el punto anterior
@@ -38,7 +44,15 @@ Para la persistencia de datos se utilizó MySQL Workbench versión 8.0
 3. Clonar o descargar el proyecto desde la rama 'daniela'
 4. Importar el proyecto desde spring tools o editor de preferencia
 5. Importar la base de datos adjuntada (carpeta Base de datos Mysql) 
+6. Probar las consultas en localhost o POSTMAN
 
+***************************************************************
+
+# Funcionalidad
+
+El proyecto crea tres tipos de naves diferentes con la siguiente petición 
+Crea una nave tipo vehiculo lanzadera: http://localhost:8081/naves/guardarVehiculoLanzadera 
+Crea una nave tipo vehiculo lanzadera: http://localhost:8081/naves/guardarNaveNoTripulada 
 
 
 
