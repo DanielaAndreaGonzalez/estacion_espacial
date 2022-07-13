@@ -57,7 +57,7 @@ public class ControladorNaveTripulada {
 
 
 	@GetMapping("/buscarNaveTripulada/{nombre}")	
-	public ResponseEntity<?> guardarVehiculo(@PathVariable String nombre ){
+	public ResponseEntity<?> buscarNombreTripulada(@PathVariable String nombre ){
 		List<naveEspacialTripulada> listavehiculoLan = this.interfazNaveTripuladaService.listarPorNombre(nombre);
 		return ResponseEntity.status(HttpStatus.CREATED).body(listavehiculoLan);
 		

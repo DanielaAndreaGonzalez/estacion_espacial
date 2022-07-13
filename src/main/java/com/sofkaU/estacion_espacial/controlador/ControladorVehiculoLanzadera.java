@@ -66,7 +66,7 @@ public class ControladorVehiculoLanzadera {
 	}
 	
 	@GetMapping("/buscarVehiculoLanzadera/{nombre}")	
-	public ResponseEntity<?> guardarVehiculo(@PathVariable String nombre ){
+	public ResponseEntity<?> buscarNombreLanzadera(@PathVariable String nombre ){
 		List<VehiculoLanzadera> listavehiculoLan = this.interfazVehiculoLanzaderaService.listarPorNombre(nombre);
 		return ResponseEntity.status(HttpStatus.CREATED).body(listavehiculoLan);
 		
