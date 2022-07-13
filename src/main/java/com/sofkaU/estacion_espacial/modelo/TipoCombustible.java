@@ -22,10 +22,7 @@ public class TipoCombustible {
 	private int id;
 	private String nombre;
 	private String descripcion;
-	
-	
-	
-	
+
 	public TipoCombustible(String nombre, String descripcion) {
 		
 		this.nombre = nombre;

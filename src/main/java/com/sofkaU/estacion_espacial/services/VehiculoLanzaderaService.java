@@ -48,7 +48,12 @@ public class VehiculoLanzaderaService implements InterfazVehiculoLanzaderaServic
 		// TODO Auto-generated method stub
 		return this.data.save(vehiculo);
 	}
-
+	
+	@Override
+	public List<VehiculoLanzadera> listarPorNombre(String nombre) {
+		// TODO Auto-generated method stub
+		return (List<VehiculoLanzadera>) data.findByName(nombre);
+	}
 	
 	
 	

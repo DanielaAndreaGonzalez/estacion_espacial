@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sofkaU.estacion_espacial.InterfaceServices.InterfazNaveTripuladaService;
+import com.sofkaU.estacion_espacial.modelo.VehiculoLanzadera;
 import com.sofkaU.estacion_espacial.modelo.naveEspacialTripulada;
 
 /**
@@ -54,6 +56,12 @@ public class ControladorNaveTripulada {
 	}
 
 
+	@GetMapping("/buscarNaveTripulada/{nombre}")	
+	public ResponseEntity<?> guardarVehiculo(@PathVariable String nombre ){
+		List<naveEspacialTripulada> listavehiculoLan = this.interfazNaveTripuladaService.listarPorNombre(nombre);
+		return ResponseEntity.status(HttpStatus.CREATED).body(listavehiculoLan);
+		
+	}
 
 
 

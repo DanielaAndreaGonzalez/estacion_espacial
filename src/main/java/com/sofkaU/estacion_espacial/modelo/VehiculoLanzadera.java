@@ -15,10 +15,15 @@ import javax.persistence.Table;
 /**
  * Esta clase permite definir una nave espacial de tipo lanzadera
  * que trata de un cohete autopropulsado que sirve para lanzar
- * una carga �til al espacio, normalmente un 
- * sat�lite artificial. (Moaramore, 2016). 
+ * una carga  util al espacio, normalmente un 
+ * satelite artificial. (Moaramore, 2016). 
  * 
  * @author DanielaAGonzalezH
+ * @version 1.0
+ * @since 11/07/2022
+ * 
+ * Esta clase permite crear un tipo de nave espacial que está diseñada
+ * con un proposito en especifico
  *
  */
 @Entity
@@ -32,7 +37,7 @@ public class VehiculoLanzadera extends NaveEspacial{
 	private double capacidadCarga;
 	private double potencia;
 	@Column(name = "sistema_propulsion")
-	private double sistemaPropulsion;
+	private String sistemaPropulsion;
 	@Column(name = "tipo_carga")
 	private String tipoCarga;
 	
@@ -54,7 +59,7 @@ public class VehiculoLanzadera extends NaveEspacial{
 	 */
 	public VehiculoLanzadera(String nombre, String pais, Date actividad, double velocidad,
 			 double peso, double alto, TipoNave tipo, double capacidadCarga,
-			 String tipoCombustible,double potencia, double sistemaPropulsion, String tipoCarga) {
+			 String tipoCombustible,double potencia, String sistemaPropulsion, String tipoCarga) {
 		super(nombre, pais, actividad, velocidad, tipoCombustible, peso, alto, tipoCarga);
 		this.capacidadCarga = capacidadCarga;
 		this.potencia = potencia;
@@ -93,13 +98,13 @@ public class VehiculoLanzadera extends NaveEspacial{
 	/**
 	 * @return the sistemaPropulsion
 	 */
-	public double getSistemaPropulsion() {
+	public String getSistemaPropulsion() {
 		return sistemaPropulsion;
 	}
 	/**
 	 * @param sistemaPropulsion the sistemaPropulsion to set
 	 */
-	public void setSistemaPropulsion(double sistemaPropulsion) {
+	public void setSistemaPropulsion(String sistemaPropulsion) {
 		this.sistemaPropulsion = sistemaPropulsion;
 	}
 	/**
@@ -125,6 +130,17 @@ public class VehiculoLanzadera extends NaveEspacial{
 	 */
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	@Override
+	public void despejar() {
+		System.out.println("Despejando vehículo lanzadera");
+	}
+
+	@Override
+	public void fijarDestino() {
+		System.out.println("Fijando destino a "+this.tipoCarga);
+		
 	}
 	
 	

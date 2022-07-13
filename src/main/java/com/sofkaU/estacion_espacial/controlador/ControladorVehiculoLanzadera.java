@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -46,6 +47,7 @@ public class ControladorVehiculoLanzadera {
 		return ResponseEntity.ok(vehiculoLanzadera);
 	}
 	
+	
 //	@GetMapping
 //	@RequestMapping(value = "guardarVehiculoLanzadera", method = RequestMethod.GET)	
 //	public VehiculoLanzadera guardar(){		
@@ -60,6 +62,13 @@ public class ControladorVehiculoLanzadera {
 		
 		VehiculoLanzadera vehiculoLan = this.interfazVehiculoLanzaderaService.guardarLanzadera(vehiculo);
 		return ResponseEntity.status(HttpStatus.CREATED).body(vehiculoLan);
+		
+	}
+	
+	@GetMapping("/buscarVehiculoLanzadera/{nombre}")	
+	public ResponseEntity<?> guardarVehiculo(@PathVariable String nombre ){
+		List<VehiculoLanzadera> listavehiculoLan = this.interfazVehiculoLanzaderaService.listarPorNombre(nombre);
+		return ResponseEntity.status(HttpStatus.CREATED).body(listavehiculoLan);
 		
 	}
 	

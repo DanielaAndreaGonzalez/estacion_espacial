@@ -29,6 +29,10 @@ public interface InterfazVehiculoLanzaderaService {
 	 */
 	public VehiculoLanzadera guardarLanzadera(VehiculoLanzadera vehiculo);
 	
-	
+	/**
+	 * Método que permite listar las naves lanzadera filtradas por nombre
+	 * @return listado de vehiculos lanzadera
+	 */
+	public List<VehiculoLanzadera> listarPorNombre(String nombre);
 
 }

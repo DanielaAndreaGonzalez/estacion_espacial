@@ -5,6 +5,7 @@ package com.sofkaU.estacion_espacial.InterfaceServices;
 
 import java.util.List;
 
+import com.sofkaU.estacion_espacial.modelo.VehiculoLanzadera;
 import com.sofkaU.estacion_espacial.modelo.naveEspacialNoTripulada;
 
 /**
@@ -27,5 +28,11 @@ public interface InterfazNaveNoTripuladaService {
 	 * @return nave no tripulada
 	 */
 	public naveEspacialNoTripulada guardarNaveNoTripulada(naveEspacialNoTripulada noTripulada);
+	
+	/**
+	 * Método que permite listar las naves lanzadera filtradas por nombre
+	 * @return listado de vehiculos lanzadera
+	 */
+	public List<naveEspacialNoTripulada> listarPorNombre(String nombre);
 	
 }

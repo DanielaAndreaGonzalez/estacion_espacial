@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.sofkaU.estacion_espacial.InterfaceServices.InterfazNaveTripuladaService;
 import com.sofkaU.estacion_espacial.interfaces.InterfaceNaveTripulada;
+import com.sofkaU.estacion_espacial.modelo.VehiculoLanzadera;
 import com.sofkaU.estacion_espacial.modelo.naveEspacialTripulada;
 
 /**
@@ -40,6 +41,13 @@ public class NaveTripuladaService implements InterfazNaveTripuladaService{
 		// TODO Auto-generated method stub
 		return this.data.save(naveTripulada);
 	}
+
+	@Override
+	public List<naveEspacialTripulada> listarPorNombre(String nombre) {
+		// TODO Auto-generated method stub
+		
+		return (List<naveEspacialTripulada>) data.findByName(nombre);
+	};
 
 	
 	

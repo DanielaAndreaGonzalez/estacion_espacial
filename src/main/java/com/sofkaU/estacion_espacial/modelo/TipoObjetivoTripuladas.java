@@ -8,7 +8,5 @@ package com.sofkaU.estacion_espacial.modelo;
  *
  */
 public enum TipoObjetivoTripuladas {
-	
-	MISIONLUNAR,COMPORTAMIENTOHUMANO,MANTENIMIENTOSATELITES;
-	
+	MISIONLUNAR,COMPORTAMIENTOHUMANO,MANTENIMIENTOSATELITES;	
 }

@@ -15,12 +15,17 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Esta clase permite crear una categor�a de nave muy nutrida, puesto que
- * no incluyen los s�telites artificiales que orbitan geoestacionalmente,su
+ * Este objeto permite crear una categoria de nave muy nutrida, puesto que
+ * no incluyen los satelites artificiales que orbitan geoestacionalmente,su
  * objetivo estriba en estudiar otros cuerpos celestes.  
  *  
  * 
- * @author DanielaAGonzalezH
+ *@author DanielaAGonzalezH
+ * @version 1.0
+ * @since 11/07/2022
+ * 
+ * Esta clase permite crear un tipo de nave espacial que está diseñada
+ * con un proposito en especifico
  *
  */
 
@@ -83,6 +88,16 @@ public class naveEspacialNoTripulada extends NaveEspacial{
 	}
 	
 	public naveEspacialNoTripulada() {
+		
+	}
+	@Override
+	public void despejar() {
+		System.out.println("Despejando nave espacial no tripulada ...");
+		
+	}
+	@Override
+	public void fijarDestino() {
+		System.out.println("Fijar destino a" +this.tipoEstudio);
 		
 	}
 	

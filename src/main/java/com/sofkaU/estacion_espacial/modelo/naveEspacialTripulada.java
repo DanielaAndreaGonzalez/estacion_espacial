@@ -15,12 +15,17 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Esta clase permite crear un tipo de nave que su prop�sito
+ * Esta clase permite crear un tipo de nave que su proposito
  * consiste en mandar seres humanos al espacio para tareas
- * de reparaci�n, mantenimiento o investigaci�n. (Moaramore, 2016).
+ * de reparacion, mantenimiento o investigacion. (Moaramore, 2016).
  * 
  * 
  * @author DanielaAGonzalezH
+ * @version 1.0
+ * @since 11/07/2022
+ * 
+ * Esta clase permite crear un tipo de nave espacial que está diseñada
+ * con un proposito en especifico
  *
  */
 @Entity
@@ -83,6 +88,15 @@ public class naveEspacialTripulada extends NaveEspacial{
 	
 	public naveEspacialTripulada() {
 		
+	}
+	@Override
+	public void despejar() {
+		System.out.println("Despejando nave espacial tripulada");
+		
+	}
+	@Override
+	public void fijarDestino() {
+		System.out.println("Fijar destino a "+this.tipoObjetivo);
 	}
 	
 	

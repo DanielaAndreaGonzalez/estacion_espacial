@@ -5,8 +5,9 @@ package com.sofkaU.estacion_espacial.InterfaceServices;
 
 import java.util.List;
 
-
+import com.sofkaU.estacion_espacial.modelo.VehiculoLanzadera;
 import com.sofkaU.estacion_espacial.modelo.naveEspacialTripulada;
+import com.sofkaU.estacion_espacial.services.NaveTripuladaService;
 
 /**
  * @author DanielaAGonzalezH
@@ -30,4 +31,10 @@ public interface InterfazNaveTripuladaService {
 	 */
 	public naveEspacialTripulada guardarNaveTripulada(naveEspacialTripulada naveTripulada);
 
+	/**
+	 * Método que permite listar las naves lanzadera filtradas por nombre
+	 * @return listado de vehiculos lanzadera
+	 */
+	public List<naveEspacialTripulada> listarPorNombre(String nombre);
+	
 }

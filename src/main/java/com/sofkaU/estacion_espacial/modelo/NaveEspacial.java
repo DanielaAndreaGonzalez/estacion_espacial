@@ -9,12 +9,16 @@ import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
 /**
- * Esta clase permite 
- * @author DanielaAGonzalezH
+ *@author DanielaAGonzalezH
+ * @version 1.0
+ * @since 11/07/2022
+ * 
+ * Esta clase padre es un modelo que permite crear naves con
+ * las caracteristicas especificadas
  *
  */
 @MappedSuperclass
-public class NaveEspacial {
+public abstract class   NaveEspacial {
 	
 	
 	//Declaracion  de atributos	
@@ -158,6 +162,11 @@ public class NaveEspacial {
 	}
 	
 	
+	/**
+	 * Métodos abstractos
+	 */
+	public abstract void  despejar();
+	public abstract void  fijarDestino();
 	
 	
 	
