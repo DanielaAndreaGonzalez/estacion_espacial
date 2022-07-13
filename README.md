@@ -50,9 +50,24 @@ Para el correcto funcionamiento se utilizó la herramienta POSTMAN (> https://op
 
 # Funcionalidad
 
-El proyecto crea tres tipos de naves diferentes con la siguiente petición 
-Crea una nave tipo vehiculo lanzadera: http://localhost:8081/naves/guardarVehiculoLanzadera 
-Crea una nave tipo vehiculo lanzadera: http://localhost:8081/naves/guardarNaveNoTripulada 
+*Crear* 
+
+El proyecto crea tres tipos de naves diferentes con la siguiente petición
+
+* Crea una nave tipo vehiculo lanzadera: http://localhost:8081/naves/guardarVehiculoLanzadera 
+* Crea una nave tipo vehiculo lanzadera: http://localhost:8081/naves/guardarNaveNoTripulada 
+* Crea una nave tipo vehiculo lanzadera: http://localhost:8081/naves/guardarNaveTripulada
+
+*Listar*
+
+El proyecto lista las naves que esten guardadas en cada uno de los tres tipo de naves
+
+* lista las naves de tipo vehiculo lanzadera: http://localhost:8081/naves/listarVehiculoLanzadera 
+* lista las naves de tipo nave espacial no tripuladad: http://localhost:8081/naves/listarNaveNoTripulada 
+* lista las naves de tipo nave espacial : http://localhost:8081/naves/listarNaveTripulada 
+
+
+
 
 
 
